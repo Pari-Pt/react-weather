@@ -1,0 +1,39 @@
+.Forecast .forecast-title {
+    font-size: 30px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .Forecast .forecast-card {
+    background: transparent;
+    border: none;
+    display: block;
+    font-size: 20;
+    margin: 0 auto;
+    max-width: 85%;
+    text-align: center;
+    top: -90px;
+  }
+  .Forecast .forecast-icon {
+    width: 55px;
+  }
+  
+  .Forecast .forecast-description {
+    font-size: 17px;
+    overflow-wrap: normal;
+    text-transform: capitalize;
+  }
+  
+  .Forecast .weekday {
+    font-size: 18px;
+  }
+  
+  .Forecast .max-temp {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .Forecast .min-temp {
+    font-size: 18px;
+    opacity: 0.8;
+  }
+  

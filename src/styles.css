@@ -1,0 +1,108 @@
+body {
+  font-family: "Gluten", cursive;
+}
+.App h1,
+.App h2,
+.App h5 {
+  display: block;
+  margin-left: 0 auto;
+  padding: none;
+  text-align: left;
+}
+
+.App h1 {
+  font-size: 60px;
+  line-height: 70px;
+  margin-bottom: 0;
+}
+
+.App h2 {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.App .main-container {
+  max-width: 800px;
+}
+.App .main-card {
+  border: 2px solid #000000;
+  display: block;
+  margin: 0 auto;
+  padding: 6px;
+  top: 20px;
+}
+
+.App .card-body {
+  padding: 15px 10px 0px 10px;
+}
+.App .main-card-body {
+  max-height: 400px;
+}
+
+.App .sub-weather {
+  font-size: 20px;
+}
+
+.high {
+  font-weight: 600;
+}
+
+.App .no-wrap {
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+}
+
+.App .day-time {
+  background: linear-gradient(
+    to top,
+    #fff1eb -20%,
+    #ace0f9 30%,
+    #fff1eb 60%,
+    #ace0f9 85%
+  );
+  color: rgb(33, 37, 41);
+  transition-duration: 2s;
+}
+
+.App .night-time {
+  background: radial-gradient(
+    circle at 1.8% 4.8%,
+    rgb(48, 55, 95) 0%,
+    rgb(110, 136, 199) 90%
+  );
+  color: #eceed5;
+  transition-duration: 2s;
+}
+
+.App .easter-mode {
+  background: linear-gradient(
+    114.2deg,
+    rgb(121, 194, 243) 22.6%,
+    rgb(255, 180, 239) 67.7%
+  );
+}
+
+.App .halloween-mode {
+  background: linear-gradient(
+    to top,
+    #fff1eb -40%,
+    #110a00 10%,
+    #e96e11 50%,
+    #2f9c13 75%,
+    #110a00 140%
+  );
+  color: #eceed5;
+  transition-duration: 2s;
+}
+
+.App .christmas-mode {
+  background: linear-gradient(
+    to top,
+    #fff1eb -40%,
+    #940606 15%,
+    #940606 74%,
+    #fff1eb 140%
+  );
+  color: #eceed5;
+  transition-duration: 2s;
+}

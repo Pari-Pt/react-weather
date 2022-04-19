@@ -1,0 +1,132 @@
+.Search input {
+    border-color: #000000;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 15px;
+    height: 30px;
+    line-height: 25px;
+    margin-right: auto;
+    margin-top: 15px;
+    padding: 4px;
+    text-align: left;
+    width: 150px;
+  }
+  
+  .Search button {
+    border-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    font-size: 18px;
+    line-height: 25px;
+    margin-right: auto;
+    margin-top: 5px;
+    text-align: center;
+  }
+  
+  .Search .button:hover {
+    cursor: pointer;
+  }
+  
+  .Search .date-display {
+    font-size: 25px;
+    text-align: right;
+  }
+  
+  .Search .time-display {
+    font-size: 25px;
+    margin-top: -10px;
+    text-align: right;
+  }
+  
+  .Search .inactive {
+    background-color: #6d6a6a;
+    pointer-events: none;
+  }
+  
+  .Search .submit {
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: 2px;
+    padding: 1px 2px;
+    text-align: center;
+    width: 30px;
+  }
+  
+  .Search .bg-theme-button {
+    border-radius: 50%;
+    font-size: 17px;
+    padding: 3px 2px 0px 2px;
+  }
+  
+  .Search #theme-button {
+    border-radius: 50%;
+    font-size: 17px;
+    padding: 3px 2px 0px 2px;
+  }
+  
+  .Search #santa-button {
+    border-radius: 50%;
+    font-size: 17px;
+    padding: 3px 2px 0px 2px;
+  }
+  
+  .Search .feat-icon-card {
+    background: none;
+    block-size: auto;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    top: -110px;
+    width: fit-content;
+    background: #ace0f9;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Search .feat-icon {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+  }
+  
+  .Search #current-description {
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    top: -15px;
+  }
+  
+  .Search #tree-1 {
+    display: block;
+    left: -130px;
+    opacity: 0.8;
+    position: relative;
+    top: -80px;
+  }
+  
+  .Search #tree-2 {
+    display: block;
+    opacity: 0.8;
+    position: relative;
+    right: -130px;
+    top: -80px;
+  }
+  
+  .Search .flip-horizontally {
+    transform: scaleX(-1);
+  }
+  
+  .Search #easter-chick-img {
+    display: block;
+    left: -205px;
+    opacity: 0.8;
+    position: relative;
+    text-align: center;
+    top: -150px;
+  }
+  
