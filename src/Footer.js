@@ -8,7 +8,7 @@ export default function Footer() {
         <a
           href="https://github.com/Seo-Pt/react-weather"
           target="_blank"
-          rel="noreferrer"
+          rel="noopenner noreferrer"
           title="Visit my GitHub page"
           className="gitHub-link"
         >
