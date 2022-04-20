@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Forecast from "./Forecast.js"
+import DateTime from "./DateTime.js"
 import "./Search.css";
 
 export default function Form() {
@@ -37,19 +39,25 @@ export default function Form() {
     setLatitude(position.coords.latitude);
     setLongitude(position.coords.longitude);
     let gelocationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ea283403784bc63466a22fcf17ab8227&units=metric`;
-    axios.get(gelocationUrl).then(displayWeather);
+    axios.get(gelocationUrl).then(displayWeather).then(displayForecast);
+
   }
 
   function displayWeather(response) {
-    console.log(response);
+    //console.log(response);
     setTemp(Math.round(response.data.main.temp));
     setName(response.data.name);
     setHumidity(response.data.main.humidity);
     setWindSpeed(Math.round(response.data.wind.speed));
     setIcon(response.data.weather[0].icon);
     setDescription(response.data.weather[0].setDescription);
+    
   }
 
+  function displayForecast(response){
+    console.log(response)
+    //let forecastLat = response.
+  }
   return (
     <div className="Search">
       <div className="row">
@@ -102,9 +110,8 @@ export default function Form() {
               😜
             </span>
           </button>
-          <div className="date-display" id="current-date"></div>
-          <div className="time-display" id="current-time"></div>
-          <div id="sunset-time"></div>
+          <DateTime />
+          
         </div>
       </div>
       <div className="card feat-icon-card">
@@ -119,6 +126,7 @@ export default function Form() {
           <div className="theme-grid"></div>
         </div>
       </div>
+      <Forecast latitude={latitude} longitude={longitude} />
     </div>
   );
 }

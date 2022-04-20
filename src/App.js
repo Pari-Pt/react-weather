@@ -1,6 +1,5 @@
 import React from "react";
 import Search from "./Search.js";
-import Forecast from "./Forecast.js";
 import Banner from "./Banner.js";
 import Footer from "./Footer.js";
 
@@ -16,7 +15,6 @@ function App() {
               <Search />
             </div>
           </div>
-          <Forecast />
           <Banner />
           <Footer />
         </div>
