@@ -4,7 +4,7 @@ import Forecast from "./Forecast.js"
 import DateTime from "./DateTime.js"
 import "./Search.css";
 
-export default function Form() {
+export default function WeatherSearch() {
   let [search, setSearch] = useState(null);
   let [name, setName] = useState("Porto");
   let [temp, setTemp] = useState(12);
