@@ -12,7 +12,7 @@ function App() {
         <div className="card main-card day-time" id="primary-card">
           <div className="card-body main-card-body">
             <div className="container overflow-hidden">
-              <WeatherSearch />
+              <WeatherSearch defaultCity="Faro" />
             </div>
           </div>
           <Banner />
