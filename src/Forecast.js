@@ -6,7 +6,7 @@ export default function Forecast(props) {
   let latitude = props.latitude
   let longitude = props.longitude
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=currently,minutely,hourly,alerts&appid=ea283403784bc63466a22fcf17ab8227&units=metric`;
-  
+  console.log(props.day)
   axios.get(apiUrl).then(displayForecast);
  
   function displayForecast(response){
@@ -31,7 +31,11 @@ export default function Forecast(props) {
       <div className="card forecast-card">
         <div className="card-body forecast-card-body">
           <div className="forecast-title">5-Day Forecast</div>
-          <div className="weather-forecast" id="forecast">{longitude}</div>
+          <div className="weather-forecast" id="forecast">
+            <div className="row">
+              <div className="col">{day}</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

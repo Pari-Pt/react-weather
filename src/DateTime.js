@@ -27,9 +27,9 @@ export default function DateTime(){
     return (
 
         <div className="DateTime">
-        <div className="date-display" id="current-date"></div>
-          <div className="time-display" id="current-time"></div>
-          <div id="sunset-time"></div>"Hello"
+        <div className="date-display" id="current-date">{currentDate}</div>
+          <div className="time-display" id="current-time">{currentTime}</div>
+          <div id="sunset-time"></div>
           </div>
           );
 }

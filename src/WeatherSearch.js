@@ -126,7 +126,7 @@ export default function Form() {
           <div className="theme-grid"></div>
         </div>
       </div>
-      <Forecast latitude={latitude} longitude={longitude} />
+      <Forecast latitude={latitude} longitude={longitude}/>
     </div>
   );
 }

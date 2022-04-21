@@ -1,5 +1,5 @@
 import React from "react";
-import Search from "./Search.js";
+import WeatherSearch from "./WeatherSearch.js";
 import Banner from "./Banner.js";
 import Footer from "./Footer.js";
 
@@ -12,7 +12,7 @@ function App() {
         <div className="card main-card day-time" id="primary-card">
           <div className="card-body main-card-body">
             <div className="container overflow-hidden">
-              <Search />
+              <WeatherSearch />
             </div>
           </div>
           <Banner />
