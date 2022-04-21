@@ -1,5 +1,5 @@
-.Footer .gitHub-link {
-    color: rgb(87, 179, 221);
+.Footer .gitHub-link, .netlify-link {
+    color: rgb(25, 138, 187);
   }
   
 .Footer #footer {

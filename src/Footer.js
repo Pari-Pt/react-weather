@@ -14,7 +14,7 @@ export default function Footer() {
         >
           Open-source code
         </a>{" "}
-        by Seonah Nathali
+        by Seonah Nathali, hosted by <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" title="Netlify Homepage" className="netlify-link">Netlify</a>
       </div>
     </div>
   );

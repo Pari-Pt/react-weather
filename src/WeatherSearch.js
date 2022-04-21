@@ -83,7 +83,7 @@ export default function WeatherSearch(props) {
               id="city-search"
               autoComplete="off"
               spellCheck="false"
-              className="input"
+              className="input text-capitalize"
               onChange={updateCity}
             />
 
