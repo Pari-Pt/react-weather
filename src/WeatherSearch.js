@@ -6,21 +6,23 @@ import "./WeatherSearch.css";
 export default function WeatherSearch(props) {
   let [weatherData, setWeatherData] = useState({ready: false});
   let [search, setSearch] = useState(null);
+  let [coordinates, setCoordinates] = useState({ready:false});
 
   
   function handleWeather(response){
-    console.log(response)
+    
     setWeatherData(
       { ready: true,
         name: response.data.name,
         temperature: Math.round(response.data.main.temp),
         wind: Math.round(response.data.wind.speed),
         humidity: response.data.main.humidity,
-        description: response.data.weather[0].setDescription,
+        description: response.data.weather[0].description,
         iconSrc: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       });
-    }
+     
     
+    }
     
     
     function updateCity(event) {
@@ -36,31 +38,33 @@ export default function WeatherSearch(props) {
         alert("Please input a city 😃");
       }
     }
-    
     let primaryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=8a986f69d218ec337be3c1ef2d26c6e8&units=metric`;
     
 
 
 
-  //function geolocateCity() {
-   // navigator.geolocation.getCurrentPosition(retrievePosition);
-  //}
+  function geolocateCity(){
+    navigator.geolocation.getCurrentPosition(retrievePosition);
 
-  //function retrievePosition(position) {
-    //console.log(position);
-    //setLatitude(position.coords.latitude);
-    //setLongitude(position.coords.longitude);
-    //let gelocationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=ea283403784bc63466a22fcf17ab8227&units=metric`;
-    //axios.get(gelocationUrl).then(displayWeather).then(displayForecast);
+    function retrievePosition(position){
+      setCoordinates(
+        { ready: true,
+          latitude: position.coords.latitude,
+         longitude: position.coords.longitude
+       });
 
-  //}
-
-  
-
- 
-  if (weatherData.ready) { 
-    return (
-    <div className="WeatherSearch">
+         if (coordinates.ready) {
+           axios.get(geolocationUrl).then(handleWeather);
+         }
+      }
+    }
+    let geolocationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=8a986f69d218ec337be3c1ef2d26c6e8&units=metric`;
+    
+    
+     
+     if (weatherData.ready) { 
+       return (
+         <div className="WeatherSearch">
       <div className="row">
         <div className="col-6">
           <h1 id="current-city" className="city-name no-wrap">
@@ -85,19 +89,18 @@ export default function WeatherSearch(props) {
               spellCheck="false"
               className="input text-capitalize"
               onChange={updateCity}
-            />
+              />
 
             <input
               type="submit"
               id="submit-button"
               className="submit"
               value="🔎"
-            />
+              />
           </form>
 
-          <button id="locator-button" //onClick={geolocateCity}
-          >
-            Current Location
+          <button id="locator-button" onClick={geolocateCity}>
+          Current Location
           </button>
           <br />
 
@@ -123,7 +126,7 @@ export default function WeatherSearch(props) {
             alt={weatherData.description}
             className="feat-icon rounded"
             id="feat-icon"
-          />
+            />
           <div id="current-description">{weatherData.description}</div>
           <div className="theme-grid"></div>
         </div>
@@ -135,10 +138,7 @@ export default function WeatherSearch(props) {
     
     let defaultApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=8a986f69d218ec337be3c1ef2d26c6e8&units=metric`;
     axios.get(defaultApiUrl).then(handleWeather);
-    return("Loading...");
-  }}
-    
-        
-      
-      
-
+    return ("Loading...");
+  }
+}
+  
