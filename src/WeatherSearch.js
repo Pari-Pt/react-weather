@@ -10,9 +10,10 @@ export default function WeatherSearch(props) {
 
   
   function handleWeather(response){
-    
+    //console.log(response)
     setWeatherData(
       { ready: true,
+        date: new Date(response.data.dt * 1000),
         name: response.data.name,
         temperature: Math.round(response.data.main.temp),
         wind: Math.round(response.data.wind.speed),
@@ -20,9 +21,8 @@ export default function WeatherSearch(props) {
         description: response.data.weather[0].description,
         iconSrc: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
       });
-     
-    
-    }
+
+  }
     
     
     function updateCity(event) {
@@ -115,7 +115,7 @@ export default function WeatherSearch(props) {
               😜
             </span>
           </button>
-          <DateTime />
+          <DateTime date={weatherData.date} />
           
         </div>
       </div>
@@ -140,5 +140,5 @@ export default function WeatherSearch(props) {
     axios.get(defaultApiUrl).then(handleWeather);
     return ("Loading...");
   }
-}
+  }
   
