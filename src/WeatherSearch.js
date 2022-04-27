@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import DateTime from "./DateTime.js";
 import WeatherData from "./WeatherData.js";
-import FeatureIcon from "./FeatureIcon.js";
+import DateTime from "./DateTime.js";
+//import FeatureIcon from "./FeatureIcon.js";
 import "./WeatherSearch.css";
-
+//<FeatureIcon iconSrc={weatherData.iconSrc} description={weatherData.description} />
 export default function WeatherSearch(props) {
   let [weatherData, setWeatherData] = useState({ready: false});
   let [search, setSearch] = useState(null);
@@ -12,7 +12,7 @@ export default function WeatherSearch(props) {
 
   
   function handleWeather(response){
-    //console.log(response)
+    
     setWeatherData(
       { ready: true,
         date: new Date(response.data.dt * 1000),
@@ -66,11 +66,12 @@ export default function WeatherSearch(props) {
      
      if (weatherData.ready) { 
        return (
-           <div className="container overflow-hidden">
+           
          <div className="WeatherSearch">
-           <div className="row">
-        <div className="col text-start">
-          <form id="search-form" onSubmit={handleSubmit}>
+          <form id="search-form" className="mb-3" onSubmit={handleSubmit}>
+          <div className="row">
+          <div className="col-9">
+            <span>
             <input
               type="search"
               placeholder="Search for a City..."
@@ -80,19 +81,23 @@ export default function WeatherSearch(props) {
               className="input text-capitalize"
               onChange={updateCity}
               />
-
+          
+          
             <input
               type="submit"
               id="submit-button"
               className="submit"
-              value="🔎"
+              value="🔎Go!"
               />
-          </form>
+             </span>
+              </div>
 
-          <button id="locator-button" onClick={geolocateCity}>
-          Current Location
-          </button>
-          <br />
+
+             <div className="col-3 button-bundle text-end">
+             <button id="locator-button" role="img" onClick={geolocateCity}>
+            <span>📍</span>
+              </button>
+      
 
           <button id="deg-c-button" className="button inactive">
             °C
@@ -100,26 +105,13 @@ export default function WeatherSearch(props) {
           <button id="deg-f-button" className="button active">
             °F
           </button>
-          <button className="button bg-theme-button">
-            <span role="img" aria-label="theme-button">
-              😜
-            </span>
-          </button>
-          <DateTime date={weatherData.date} />
-          
+              </div>
         </div>
-
-
-            <div className="col text-end">
+          </form>
+            <DateTime timestamp={weatherData.date}/>
             <WeatherData data={weatherData} />
-            </div>
-      
-      </div>
   </div>
-      <FeatureIcon iconSrc={weatherData.iconSrc} description={weatherData.description} />
-      
-  </div>
-  );} 
+   );} 
   
   else {
     

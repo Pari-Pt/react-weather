@@ -2,16 +2,16 @@ import React from "react";
 import "./DateTime.css";
 
 export default function DateTime(props){
-    console.log(props);
+    //console.log(props.timestamp);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    let day = days[props.date.getDay()];
-    let date = props.date.getDate();
-    let month = months[props.date.getMonth()];
+    let day = days[props.timestamp.getDay()];
+    let date = props.timestamp.getDate();
+    let month = months[props.timestamp.getMonth()];
 
-    let hours = props.date.getHours();
-    let minutes = props.date.getMinutes();
+    let hours = props.timestamp.getHours();
+    let minutes = props.timestamp.getMinutes();
 
     if (hours < 10) {
         hours = `0${hours}`;

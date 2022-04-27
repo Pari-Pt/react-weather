@@ -1,20 +1,40 @@
 .WeatherSearch{
   font-family: "Gluten", cursive;
 }
+
+.WeatherSearch #search-form{
+  max-width:600px;
+ 
+}
 .WeatherSearch input {
     border-color: #000000;
     border-radius: 10px;
     display: inline-block;
-    font-size: 25px;
-    height: 35px;
+    font-size: 20px;
+    height: 30px;
     line-height: 25px;
     margin-right: auto;
-    margin-top: 15px;
+    
     padding: 4px;
     text-align: left;
-    width: 280px;
+    width: 80%;
+    
   }
-  
+
+ 
+  .WeatherSearch .submit {
+    display: inline-block;
+    font-size: 18px;
+    height:30px;
+    line-height: 25px;
+ 
+    text-align: center;
+    width:fit-content;
+    padding: 2px;
+    
+    
+  }
+ 
   .WeatherSearch button {
     border-color: #000000;
     border-radius: 10px;
@@ -23,7 +43,7 @@
     font-size: 18px;
     line-height: 25px;
     margin-right: auto;
-    margin-top: 5px;
+   
     text-align: center;
   }
   
@@ -38,17 +58,7 @@
     pointer-events: none;
   }
   
-  .WeatherSearch .submit {
-    display: inline-block;
-    font-size: 18px;
-    line-height: 25px;
-    margin: 0 auto;
-    margin-top: 5px;
-    margin-right: auto;
-    margin-left: 2px;
-    text-align: center;
-    width: 40px;
-  }
+  
   
   .WeatherSearch .bg-theme-button {
     border-radius: 50%;
