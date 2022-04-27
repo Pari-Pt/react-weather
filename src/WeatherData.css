@@ -1,6 +1,10 @@
 .WeatherData {
   margin-top: -50px;
 }
+
+.WeatherData .vr{
+  width: 3px;
+}
 .WeatherData #current-description {
     font-size: 25px;
     position: relative;
@@ -9,7 +13,3 @@
     top: -15px;
   }
 
- .WeatherData h2{
-  color: rgb(54, 53, 53);
-
- }
