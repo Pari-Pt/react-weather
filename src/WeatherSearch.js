@@ -93,17 +93,18 @@ export default function WeatherSearch(props) {
           </div>
 
           <div className="col-3 button-bundle text-end">
-          <button id="locator-button" onClick={geolocateCity}>
-            <span role="img" aria-label="current location">📍</span>
-          </button>
-          <button id="deg-c-button" className="button inactive">
-            °C
-          </button>
-          <button id="deg-f-button" className="button active">
-            °F
-          </button>
-          </div>
-         </div>
+            
+             <button id="locator-button"  onClick={geolocateCity}>
+            <span role="img" aria-label="pin">📍</span>
+              </button>
+              
+
+        
+          
+              </div>
+
+             
+        </div>
             <DateTime timestamp={weatherData.date}/>
             <WeatherData data={weatherData} />
   </div>

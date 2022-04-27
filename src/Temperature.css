@@ -1,0 +1,13 @@
+.Temperature {
+    font-size: 25px;
+    color: black;
+  }
+
+  .Temperature .unit-link{
+      margin-top: -37px;
+  }
+
+  .Temperature .small-vr{
+      height: 10px;
+
+  }

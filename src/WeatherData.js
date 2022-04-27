@@ -1,5 +1,6 @@
 import React from "react";
 import FeatureIcon from "./FeatureIcon.js";
+import Temperature from "./Temperature.js";
 import "./WeatherData.css";
 
 export default function WeatherData(props){
@@ -16,7 +17,7 @@ return(
         
            
         <div className="hstack gap-3 align-middle">
-            <h2 id="current-temp">{props.data.temperature}°C</h2>
+            <Temperature temp={props.data.temperature}/>
             <div className="vr"></div>
             <div className="vstack">
             <div className="sub-weather" id="humidity">Humidity: {props.data.humidity}%</div>
