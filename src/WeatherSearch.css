@@ -31,16 +31,7 @@
     cursor: pointer;
   }
   
-  .WeatherSearch .date-display {
-    font-size: 25px;
-    text-align: right;
-  }
-  
-  .WeatherSearch .time-display {
-    font-size: 25px;
-    margin-top: -10px;
-    text-align: right;
-  }
+
   
   .WeatherSearch .inactive {
     background-color: #6d6a6a;
@@ -77,32 +68,9 @@
     padding: 3px 2px 0px 2px;
   }
   
-  .WeatherSearch .feat-icon-card {
-    background: none;
-    block-size: auto;
-    border: none;
-    border-radius: 10px;
-    display: block;
-    margin: auto;
-    top: -110px;
-    width: fit-content;
-    background: #ace0f9;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  }
   
-  .WeatherSearch .feat-icon {
-    display: block;
-    margin: 0 auto;
-    width: 180px;
-  }
   
-  .WeatherSearch #current-description {
-    font-size: 25px;
-    position: relative;
-    text-align: center;
-    text-transform: capitalize;
-    top: -15px;
-  }
+ 
   
   .WeatherSearch #tree-1 {
     display: block;

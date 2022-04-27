@@ -1,0 +1,9 @@
+.WeatherData #current-description {
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    top: -15px;
+  }
+
+  

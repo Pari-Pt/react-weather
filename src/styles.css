@@ -2,7 +2,7 @@
 
 .App {
   font-family: "Gluten", cursive;
-  width: 60%;
+  max-width: 800px;
   
 }
 .App h1,

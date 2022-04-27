@@ -12,6 +12,7 @@ function App() {
         <div className="card main-card day-time" id="primary-card">
           <div className="card-body main-card-body">
             <div className="container overflow-hidden">
+            
               <WeatherSearch defaultCity="Faro" />
             </div>
           </div>
@@ -19,7 +20,8 @@ function App() {
           <Footer />
         </div>
       </div>
-    </div>
+      </div>
+    
   );
 }
 

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import DateTime from "./DateTime.js"
+import DateTime from "./DateTime.js";
+import WeatherData from "./WeatherData.js";
+import FeatureIcon from "./FeatureIcon.js";
 import "./WeatherSearch.css";
 
 export default function WeatherSearch(props) {
@@ -64,22 +66,10 @@ export default function WeatherSearch(props) {
      
      if (weatherData.ready) { 
        return (
+           <div className="container overflow-hidden">
          <div className="WeatherSearch">
-      <div className="row">
-        <div className="col-6">
-          <h1 id="current-city" className="city-name no-wrap">
-            {weatherData.name}
-          </h1>
-
-          <h2 id="current-temp">{weatherData.temperature}°C</h2>
-          <div className="sub-weather" id="humidity">
-            Humidity: {weatherData.humidity}%
-          </div>
-          <div className="sub-weather" id="wind-speed">
-            Wind Speed: {weatherData.wind}km/h
-          </div>
-        </div>
-        <div className="col text-end">
+           <div className="row">
+        <div className="col text-start">
           <form id="search-form" onSubmit={handleSubmit}>
             <input
               type="search"
@@ -118,20 +108,17 @@ export default function WeatherSearch(props) {
           <DateTime date={weatherData.date} />
           
         </div>
+
+
+            <div className="col text-end">
+            <WeatherData data={weatherData} />
+            </div>
+      
       </div>
-      <div className="card feat-icon-card">
-        <div className="card-body feat-icon-card-body">
-          <img
-            src={weatherData.iconSrc}
-            alt={weatherData.description}
-            className="feat-icon img-fluid rounded"
-            id="feat-icon"
-            />
-          <div id="current-description">{weatherData.description}</div>
-          <div className="theme-grid"></div>
-        </div>
-      </div>
-    </div>
+  </div>
+      <FeatureIcon iconSrc={weatherData.iconSrc} description={weatherData.description} />
+      
+  </div>
   );} 
   
   else {

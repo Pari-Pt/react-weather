@@ -1,7 +1,11 @@
 .DateTime #formatted-date{
     margin-bottom: 5px;
+    text-align: right;
 }
 
 .DateTime #formatted-time{
     font-size: 18px;
+    text-align: right;
 }
+
+  
