@@ -4,8 +4,6 @@ import Temperature from "./Temperature.js";
 import "./WeatherData.css";
 
 export default function WeatherData(props){
-    //console.log(props.data.date)
-    //console.log(props.data.iconCode)
 return(
      <div className="WeatherData">
         
@@ -21,10 +19,9 @@ return(
             <div className="vstack">
             <div className="sub-weather" id="humidity">Humidity: {props.data.humidity}%</div>
             <div className="sub-weather" id="wind-speed">Speed: {props.data.wind}m/s</div> 
-            
             </div>
             </div>
-                <FeatureIcon icon={props.data.iconCode}/>
+            <FeatureIcon icon={props.data.iconCode}/>
             
             
 
