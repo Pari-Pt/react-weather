@@ -59,56 +59,10 @@
 }
 
 .App .day-time {
-  background: linear-gradient(
-    to top,
-    #fff1eb -20%,
-    #ace0f9 30%,
-    #fff1eb 60%,
-    #ace0f9 85%
-  );
+  background: rgb(245, 204, 71);
   color: rgb(33, 37, 41);
   transition-duration: 2s;
 }
 
-.App .night-time {
-  background: radial-gradient(
-    circle at 1.8% 4.8%,
-    rgb(48, 55, 95) 0%,
-    rgb(110, 136, 199) 90%
-  );
-  color: #eceed5;
-  transition-duration: 2s;
-}
 
-.App .easter-mode {
-  background: linear-gradient(
-    114.2deg,
-    rgb(121, 194, 243) 22.6%,
-    rgb(255, 180, 239) 67.7%
-  );
-}
 
-.App .halloween-mode {
-  background: linear-gradient(
-    to top,
-    #fff1eb -40%,
-    #110a00 10%,
-    #e96e11 50%,
-    #2f9c13 75%,
-    #110a00 140%
-  );
-  color: #eceed5;
-  transition-duration: 2s;
-}
-
-.App .christmas-mode {
-  background: linear-gradient(
-    to top,
-    #fff1eb -40%,
-    #940606 15%,
-    #940606 74%,
-    #fff1eb 140%
-  );
-  color: #eceed5;
-  transition-duration: 2s;
-}

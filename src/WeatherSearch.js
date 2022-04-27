@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherData from "./WeatherData.js";
 import DateTime from "./DateTime.js";
-//import FeatureIcon from "./FeatureIcon.js";
 import "./WeatherSearch.css";
-//<FeatureIcon iconSrc={weatherData.iconSrc} description={weatherData.description} />
+
 export default function WeatherSearch(props) {
   let [weatherData, setWeatherData] = useState({ready: false});
   let [search, setSearch] = useState(null);
@@ -21,7 +20,7 @@ export default function WeatherSearch(props) {
         wind: Math.round(response.data.wind.speed),
         humidity: response.data.main.humidity,
         description: response.data.weather[0].description,
-        iconSrc: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+        iconCode: response.data.weather[0].icon
       });
 
   }
@@ -68,9 +67,9 @@ export default function WeatherSearch(props) {
        return (
            
          <div className="WeatherSearch">
-          <form id="search-form" className="mb-3" onSubmit={handleSubmit}>
           <div className="row">
           <div className="col-9">
+          <form id="search-form" className="mb-3" onSubmit={handleSubmit}>
             <span>
             <input
               type="search"
@@ -90,24 +89,21 @@ export default function WeatherSearch(props) {
               value="🔎Go!"
               />
              </span>
-              </div>
+          </form>
+          </div>
 
-
-             <div className="col-3 button-bundle text-end">
-             <button id="locator-button" role="img" onClick={geolocateCity}>
-            <span>📍</span>
-              </button>
-      
-
+          <div className="col-3 button-bundle text-end">
+          <button id="locator-button" onClick={geolocateCity}>
+            <span role="img" aria-label="current location">📍</span>
+          </button>
           <button id="deg-c-button" className="button inactive">
             °C
           </button>
           <button id="deg-f-button" className="button active">
             °F
           </button>
-              </div>
-        </div>
-          </form>
+          </div>
+         </div>
             <DateTime timestamp={weatherData.date}/>
             <WeatherData data={weatherData} />
   </div>
