@@ -11,7 +11,6 @@ return(
         
         <div className="hstack gap-3 align-middle">
         <h1 id="current-city" className="city-name no-wrap">{props.data.name}</h1>
-        <FeatureIcon code={props.data.iconCode}/>
         </div>
        
         
@@ -22,9 +21,15 @@ return(
             <div className="vstack">
             <div className="sub-weather" id="humidity">Humidity: {props.data.humidity}%</div>
             <div className="sub-weather" id="wind-speed">Speed: {props.data.wind}m/s</div> 
+            
             </div>
+            </div>
+                <FeatureIcon icon={props.data.iconCode}/>
+            
+            
+
         </div>
-        </div>
+        
 
     );
 }
