@@ -23,9 +23,9 @@ export default function Temperature(props){
 
             <span className="unit-link">
            
-                <a href="/" >
+                
                 °C
-              </a>
+              
               
               </span>
 
@@ -60,9 +60,9 @@ export default function Temperature(props){
 
               <span className="unit-link">
             
-                  <a href="/">
+                  
                 °F
-              </a>
+              
              
             </span>
             </div>
