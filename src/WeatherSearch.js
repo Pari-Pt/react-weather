@@ -124,7 +124,7 @@ export default function WeatherSearch(props) {
           <img
             src={weatherData.iconSrc}
             alt={weatherData.description}
-            className="feat-icon rounded"
+            className="feat-icon img-fluid rounded"
             id="feat-icon"
             />
           <div id="current-description">{weatherData.description}</div>
