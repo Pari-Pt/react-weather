@@ -1,4 +1,5 @@
 import React from "react";
+import "./DateTime.css";
 
 export default function DateTime(props){
     console.log(props);
@@ -24,8 +25,8 @@ export default function DateTime(props){
 
     return (
         <div className="DateTime">
-            <div className="date-display" id="current-date">{formattedDate}</div>
-            <div className="time-display" id="current-time">{formattedTime}</div>
+            <div className="date-display" id="formatted-date">{formattedDate}</div>
+            <div className="time-display" id="formatted-time">Last updated:{" "}{formattedTime}</div>
         </div>
     )
 }
