@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureIcon from "./FeatureIcon.js";
+import WeatherIcon from "./WeatherIcon.js";
 import Temperature from "./Temperature.js";
 import "./WeatherData.css";
 
@@ -21,7 +21,7 @@ return(
             <div className="sub-weather" id="wind-speed">Speed: {props.data.wind}m/s</div> 
             </div>
             </div>
-            <FeatureIcon icon={props.data.iconCode}/>
+            <WeatherIcon icon={props.data.iconCode} size={65}/>
             
             
 
