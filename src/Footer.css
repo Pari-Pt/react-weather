@@ -3,10 +3,12 @@
   }
   
 .Footer #footer {
-    display: block;
-    font-size: 15px;
-    height: 20px;
-    position: relative;
-    text-align: center;
-  }
-  
+  display: block;
+  font-size: 20px;
+  height: 20px;
+  position: relative;
+
+  margin-top: 20px;
+  text-align: center;
+}
+

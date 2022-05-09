@@ -5,6 +5,7 @@ export default function Footer() {
   return (
     <div className="Footer">
       <div id="footer">
+        <div>
         <a
           href="https://github.com/Seo-Pt/react-weather"
           target="_blank"
@@ -14,7 +15,9 @@ export default function Footer() {
         >
           Open-source code
         </a>{" "}
-        by Seonah Nathali, hosted by <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" title="Netlify Homepage" className="netlify-link">Netlify</a>
+        by Seonah Nathali</div>
+        <div>Hosted by <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" title="Netlify Homepage" className="netlify-link">Netlify</a>
+        </div>
       </div>
     </div>
   );

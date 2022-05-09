@@ -17,9 +17,9 @@ function App() {
             </div>
           </div>
           <Banner />
-          <Footer />
         </div>
       </div>
+          <Footer />
       </div>
     
   );
