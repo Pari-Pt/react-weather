@@ -108,6 +108,7 @@ export default function WeatherSearch(props) {
         </div>
             <DateTime timestamp={weatherData.date}/>
             <WeatherData data={weatherData} />
+            <WeatherForecast />
   </div>
    );} 
   
