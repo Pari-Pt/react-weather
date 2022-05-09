@@ -88,30 +88,24 @@ export default function WeatherSearch(props) {
               type="submit"
               id="submit-button"
               className="submit"
-              value="🔎Go!"
+              value="🔎Go"
               />
              </span>
           </form>
           </div>
 
           <div className="col-3 button-bundle text-end">
-            
-             <button id="locator-button"  onClick={geolocateCity}>
-            <span role="img" aria-label="pin">📍</span>
-              </button>
-              
-
-        
-          
-              </div>
-
-             
+            <button id="locator-button"  onClick={geolocateCity}>
+            <span role="img" aria-label="pin">📍Find Me</span>
+            </button>
+          </div> 
         </div>
             <DateTime timestamp={weatherData.date}/>
             <WeatherData data={weatherData} />
             <WeatherForecast />
   </div>
    );} 
+
   
   else {
     
