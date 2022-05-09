@@ -4,10 +4,9 @@
   
 .Footer #footer {
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   height: 20px;
   position: relative;
-
   margin-top: 20px;
   text-align: center;
 }
