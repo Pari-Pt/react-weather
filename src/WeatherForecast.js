@@ -22,8 +22,8 @@ console.log(forecast[1].temp.max);
                 <div className="day-name">Mon</div>
                 <WeatherIcon icon="13d" size={50} />
                 <div className="temperatures">
-                    <span className="temp-max">19° | </span>
-                    <span className="temp-min">9°</span>
+                    <span className="temp-max">{Math.round(forecast[1].temp.max)}° | </span>
+                    <span className="temp-min">{Math.round(forecast[1].temp.min)}°</span>
                 </div>
             </div>
         </div>
