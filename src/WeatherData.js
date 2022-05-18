@@ -23,7 +23,6 @@ return(
             <div className="sub-weather" id="humidity">Humidity: {props.data.humidity}%</div>
             <div className="sub-weather" id="wind-speed">Speed: {props.data.wind}m/s</div> 
             </div>
-            
             </div>
             </div>
             

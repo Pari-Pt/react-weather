@@ -4,6 +4,7 @@
 
 .WeatherData .vr{
   width: 3px;
+  opacity: 0.3;
 }
 .WeatherData #current-description {
     font-size: 25px;
