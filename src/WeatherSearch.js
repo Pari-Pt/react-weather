@@ -12,7 +12,7 @@ export default function WeatherSearch(props) {
 
   
   function handleWeather(response){
-    
+    console.log(response.data.dt)
     setWeatherData(
       { ready: true,
         coordinates: response.data.coord,
