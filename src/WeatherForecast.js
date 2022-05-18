@@ -20,7 +20,7 @@ export default function WeatherForecast(props){
                 if (index > 0 && index < 6) {
                     return (
                         <div className="col" key={index}>
-                        <ForecastDay data={dailyForecast}/>
+                        <ForecastDay data={dailyForecast} />
                         </div>
                     );
                 }
@@ -38,7 +38,7 @@ export default function WeatherForecast(props){
         
         axios.get(apiUrl).then(handleResponse);
         
-        return (null);
+        return null;
 
     }
 }
