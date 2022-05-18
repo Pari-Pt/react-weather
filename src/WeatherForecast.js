@@ -20,7 +20,7 @@ console.log(forecast[1].temp.max);
         <div className="row">
             <div className="col">
                 <div className="day-name">Mon</div>
-                <WeatherIcon icon="13d" size={50} />
+                <WeatherIcon icon={forecast[1].weather[0].icon} size={50} />
                 <div className="temperatures">
                     <span className="temp-max">{Math.round(forecast[1].temp.max)}° | </span>
                     <span className="temp-min">{Math.round(forecast[1].temp.min)}°</span>
@@ -31,9 +31,10 @@ console.log(forecast[1].temp.max);
         );
 
     } else {
+        let apiKey = `ea283403784bc63466a22fcf17ab8227`;
         let latitude = props.coordinates.lat;
         let longitude = props.coordinates.lon;
-        let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=current,minutely,hourly,alerts&appid=8a986f69d218ec337be3c1ef2d26c6e8&units=metric`;
+        let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
         
         axios.get(apiUrl).then(handleResponse);
         

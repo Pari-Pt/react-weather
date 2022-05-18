@@ -41,7 +41,8 @@ export default function WeatherSearch(props) {
         alert("Please input a city 😃");
       }
     }
-    let primaryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=8a986f69d218ec337be3c1ef2d26c6e8&units=metric`;
+    let apiKey = `ea283403784bc63466a22fcf17ab8227`;
+    let primaryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apiKey}&units=metric`;
     
 
 
@@ -62,7 +63,7 @@ export default function WeatherSearch(props) {
          }
       }
 
-    let geolocationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=8a986f69d218ec337be3c1ef2d26c6e8&units=metric`;
+    let geolocationUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${apiKey}&units=metric`;
     
     
      
@@ -110,7 +111,7 @@ export default function WeatherSearch(props) {
   
   else {
     
-    let defaultApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=8a986f69d218ec337be3c1ef2d26c6e8&units=metric`;
+    let defaultApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(defaultApiUrl).then(handleWeather);
     return ("Loading...");
   }
