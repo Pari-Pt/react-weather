@@ -2,7 +2,6 @@ import React from "react";
 import "./DateTime.css";
 
 export default function DateTime(props){
-    //console.log(props.timestamp);
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 

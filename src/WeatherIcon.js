@@ -3,7 +3,6 @@ import ReactAnimatedWeather from "react-animated-weather";
 import "./WeatherIcon.css";
 
 export default function FeatureIcon(props){
-  //console.log(props)
   const codeMapping = {
     "01d": "CLEAR_DAY",
     "0ln": "CLEAR_NIGHT",

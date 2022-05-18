@@ -7,12 +7,11 @@ import "./WeatherSearch.css";
 
 export default function WeatherSearch(props) {
   let [weatherData, setWeatherData] = useState({ready: false});
-  let [search, setSearch] = useState(null);
+  let [search, setSearch] = useState(props.defaultCity);
   let [coordinates, setCoordinates] = useState({ready:false});
 
   
   function handleWeather(response){
-    console.log(response.data.dt)
     setWeatherData(
       { ready: true,
         coordinates: response.data.coord,
