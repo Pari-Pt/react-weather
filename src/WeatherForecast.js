@@ -12,6 +12,7 @@ export default function WeatherForecast(props){
         setForecast(response.data.daily);
     }
     
+    
     if (loaded) {
         return (
         <div className="WeatherForecast">
@@ -24,6 +25,7 @@ export default function WeatherForecast(props){
                         </div>
                     );
                 }
+                return null;
             })}
             
         </div>
