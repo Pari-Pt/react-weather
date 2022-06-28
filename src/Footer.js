@@ -7,7 +7,7 @@ export default function Footer() {
       <div id="footer">
         <div>
         <a
-          href="https://github.com/Seo-Pt/react-weather"
+          href="https://github.com/Pari-Pt/react-weather"
           target="_blank"
           rel="noopener noreferrer"
           title="Visit my GitHub page"
@@ -15,7 +15,7 @@ export default function Footer() {
         >
           Open-source code
         </a>{" "}
-        by <a href="https://confident-elion-25e30f.netlify.app/index.html" target="_blank" rel="noopener noreferrer" title="Seonah's Portfolio" className="portfolio-link">Seonah Nathali</a></div>
+        by <a href="https://confident-elion-25e30f.netlify.app/index.html" target="_blank" rel="noopener noreferrer" title="Pari's Portfolio" className="portfolio-link">S. Pari Nathali</a></div>
         <div>Hosted by <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" title="Netlify Homepage" className="netlify-link">Netlify</a>
         </div>
       </div>
